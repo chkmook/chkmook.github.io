@@ -85,7 +85,7 @@ content:
         #   Solving 21st century problems by diging holes and making game changing products like the *not a flamethrower*
         description: | # this will include new lines to allow paragraphs
             Undergraduate Intern
-    content:
+            
       - layout: left
         title: Computer Vision Lab @Yonsei University
         # link: boringcompany.com
@@ -108,7 +108,7 @@ content:
         #   Established in 1636, Harvard is the oldest higher education institution in the United States, and is widely regarded in terms of its influence, reputation, and academic pedigree as a leading university in not just the US but also the world.
         description: | # this will include new lines to allow paragraphs
           Joint course of M.S./Ph.D degrees in Department of Artificial Intelligence
-    content:
+          
       - layout: left
         title: Yonsei University
         caption: March 2015 - August 2021
@@ -117,7 +117,7 @@ content:
         #   Established in 1636, Harvard is the oldest higher education institution in the United States, and is widely regarded in terms of its influence, reputation, and academic pedigree as a leading university in not just the US but also the world.
         description: | # this will include new lines to allow paragraphs
           Bachelor in School of Electrical and Electronic Engineering
-    content:
+          
       - layout: left
         title: Gyeonggibuk Science High School
         caption: March 2013 - January 2015
