@@ -1,0 +1,84 @@
+:root {
+  --link: #1772d0;
+  --text: #333;
+  --muted: #666;
+  --rule: #e6e6e6;
+  --white: #fff;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; padding: 0; background: var(--white);
+  color: var(--text);
+  font: 15px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
+.page { max-width: 850px; padding: 0 24px; margin: 0 auto; }
+.intro {
+  display: grid; grid-template-columns: minmax(0,1fr) 206px;
+  gap: 35px; align-items: center; padding: 71px 0 47px;
+}
+.intro-copy h1 {
+  margin: 0 0 13px; text-align: center; font-size: 31px;
+  line-height: 1.25; font-weight: 500; color: #252525;
+}
+.intro-copy .position { text-align: center; margin: 0 0 21px; }
+.intro-copy p { margin: 0 0 15px; }
+.contact-links { margin-top: 23px; display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+.contact-links a { white-space: nowrap; }
+.contact-links span,.paper-links span { color: #aaa; }
+.portrait-wrap { display: flex; justify-content: center; }
+.portrait { display: block; width: 100%; max-width: 206px; height: auto; aspect-ratio: 1 / 1.1; object-fit: cover; object-position: center 20%; border-radius: 3px; }
+.content-section { margin: 4px 0 43px; }
+.content-section h2 { margin: 0 0 16px; font-size: 22px; line-height: 1.35; font-weight: 500; color: #252525; }
+.content-section > p { margin-top: 0; }
+.section-note { color: var(--muted); font-size: 13px; }
+.paper-list { display: flex; flex-direction: column; gap: 29px; margin-top: 22px; }
+.paper { display: grid; grid-template-columns: 184px minmax(0,1fr); column-gap: 23px; align-items: start; }
+.paper-cover {
+  width: 184px; height: 120px; border-radius: 3px; display: flex;
+  flex-direction: column; align-items: flex-start; justify-content: flex-end; padding: 15px;
+  font-size: 15px; font-weight: 750; color: #fff; overflow: hidden; position: relative;
+}
+.paper-cover:before { content:""; position: absolute; border: 17px solid rgba(255,255,255,.16); width: 90px; height: 90px; border-radius: 50%; right: -23px; top: -24px; }
+.paper-cover:after { content:""; position: absolute; width: 130px; height: 70px; border: 10px solid rgba(255,255,255,.16); transform: rotate(-35deg); border-radius: 50%; top: 34px; right: 8px; }
+.paper-cover-wacv { background: linear-gradient(120deg,#617baf,#b3c1d1); }
+.paper-cover-neurips { background: linear-gradient(120deg,#528d8e,#a3b7a6); }
+.cover-label,.cover-year { position: relative; z-index: 1; }
+.cover-year { font-size: 11px; opacity: .93; }
+.paper h3 { font-size: 15px; line-height: 1.5; font-weight: 700; margin: -2px 0 5px; }
+.paper h3 a { color: #272727; }
+.paper h3 a:hover { color: var(--link); }
+.paper p { margin: 0 0 4px; font-size: 13.5px; line-height: 1.55; }
+.paper .authors { color: #434343; }
+.paper .venue { color: #666; font-style: italic; }
+.paper .paper-links { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 0 10px; }
+.paper .paper-links a { font-size: 13px; }
+.paper .footnote { font-size: 11px; color: #888; }
+.education-list { display: grid; gap: 15px; }
+.education-item { display: grid; grid-template-columns: 134px minmax(0,1fr); gap: 15px; }
+.edu-dates { color: #666; font-size: 13px; padding-top: 2px; }
+.education-item p { margin: 2px 0 0; font-size: 14px; color: #555; }
+footer { border-top: 1px solid var(--rule); margin: 60px 0 0; padding: 22px 0 35px; color: #888; font-size: 12px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 18px; }
+footer a { color: #777; }
+@media (max-width: 650px) {
+  .page { padding: 0 19px; }
+  .intro { grid-template-columns: 1fr; gap: 25px; padding-top: 36px; }
+  .intro-copy h1 { font-size: 29px; }
+  .portrait-wrap { grid-row: 1; }
+  .portrait { width: 158px; max-width: 158px; height: 177px; }
+  .paper { grid-template-columns: 118px minmax(0,1fr); gap: 16px; }
+  .paper-cover { width: 118px; height: 90px; padding: 10px; font-size: 13px; }
+  .paper h3 { font-size: 14px; }
+  .paper p { font-size: 12px; }
+  .education-item { grid-template-columns: 1fr; gap: 0; }
+  .content-section { margin-bottom: 35px; }
+}
+@media (max-width: 380px) {
+  .paper { grid-template-columns: 1fr; }
+  .paper-cover { width: 100%; height: 82px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
