@@ -45,6 +45,7 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
 }
 .paper-cover:before { content:""; position: absolute; border: 17px solid rgba(255,255,255,.16); width: 90px; height: 90px; border-radius: 50%; right: -23px; top: -24px; }
 .paper-cover:after { content:""; position: absolute; width: 130px; height: 70px; border: 10px solid rgba(255,255,255,.16); transform: rotate(-35deg); border-radius: 50%; top: 34px; right: 8px; }
+.paper-cover-arxiv { background: linear-gradient(120deg,#806a9f,#b9accb); }
 .paper-cover-wacv { background: linear-gradient(120deg,#617baf,#b3c1d1); }
 .paper-cover-neurips { background: linear-gradient(120deg,#528d8e,#a3b7a6); }
 .cover-label,.cover-year { position: relative; z-index: 1; }
