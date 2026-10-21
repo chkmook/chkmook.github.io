@@ -38,18 +38,8 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
 .section-note { color: var(--muted); font-size: 13px; }
 .paper-list { display: flex; flex-direction: column; gap: 29px; margin-top: 22px; }
 .paper { display: grid; grid-template-columns: 184px minmax(0,1fr); column-gap: 23px; align-items: start; }
-.paper-cover {
-  width: 184px; height: 120px; border-radius: 3px; display: flex;
-  flex-direction: column; align-items: flex-start; justify-content: flex-end; padding: 15px;
-  font-size: 15px; font-weight: 750; color: #fff; overflow: hidden; position: relative;
-}
-.paper-cover:before { content:""; position: absolute; border: 17px solid rgba(255,255,255,.16); width: 90px; height: 90px; border-radius: 50%; right: -23px; top: -24px; }
-.paper-cover:after { content:""; position: absolute; width: 130px; height: 70px; border: 10px solid rgba(255,255,255,.16); transform: rotate(-35deg); border-radius: 50%; top: 34px; right: 8px; }
-.paper-cover-arxiv { background: linear-gradient(120deg,#806a9f,#b9accb); }
-.paper-cover-wacv { background: linear-gradient(120deg,#617baf,#b3c1d1); }
-.paper-cover-neurips { background: linear-gradient(120deg,#528d8e,#a3b7a6); }
-.cover-label,.cover-year { position: relative; z-index: 1; }
-.cover-year { font-size: 11px; opacity: .93; }
+.paper-thumbnail { display: block; width: 184px; border-radius: 3px; overflow: hidden; }
+.paper-thumbnail img { display: block; width: 100%; height: auto; }
 .paper h3 { font-size: 15px; line-height: 1.5; font-weight: 700; margin: -2px 0 5px; }
 .paper h3 a { color: #272727; }
 .paper h3 a:hover { color: var(--link); }
@@ -72,7 +62,7 @@ footer a { color: #777; }
   .portrait-wrap { grid-row: 1; }
   .portrait { width: 158px; max-width: 158px; height: 177px; }
   .paper { grid-template-columns: 118px minmax(0,1fr); gap: 16px; }
-  .paper-cover { width: 118px; height: 90px; padding: 10px; font-size: 13px; }
+  .paper-thumbnail { width: 118px; }
   .paper h3 { font-size: 14px; }
   .paper p { font-size: 12px; }
   .education-item { grid-template-columns: 1fr; gap: 0; }
@@ -80,6 +70,6 @@ footer a { color: #777; }
 }
 @media (max-width: 380px) {
   .paper { grid-template-columns: 1fr; }
-  .paper-cover { width: 100%; height: 82px; }
+  .paper-thumbnail { width: 100%; max-width: 280px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
